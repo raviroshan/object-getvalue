@@ -1,6 +1,6 @@
 {
 	"name": "object-getvalue",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Get Object's nested value",
 	"main": "src/index.js",
 	"directories": {
