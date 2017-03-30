@@ -1,0 +1,22 @@
+{
+  "name": "getvalue",
+  "version": "1.0.0",
+  "description": "Get Object's nested value",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "Object",
+    "getValues",
+    "getProperty"
+  ],
+  "author": "Ravi Roshan",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
