@@ -13,7 +13,7 @@ var Person = function() {
 	};
 };
 
-var Employee = function(name, company, empId, city) {
+var Employee = function() {
 	this.name = 'Ravi Roshan';
 	this.company = 'XYZ Consulting';
 	this.empId = 12345;
@@ -29,7 +29,7 @@ var Employee = function(name, company, empId, city) {
 
 Employee.prototype = new Person();
 
-emp1 = new Employee('Ravi', 'XYZ Consulting', 12345, 'Bangalore');
+emp1 = new Employee();
 
 describe('Object-getValue', function() {
 	describe('Check for property on Current Object', function() {
@@ -69,8 +69,8 @@ describe('Object-getValue', function() {
 			assert.equal(getValue(emp1, 'salary', 9999), 9999);
 		});
 
-		it('should return the Actual value - Even If Default Return is provided', function() {
-			assert.equal(getValue(emp1, 'empId', 6789), emp1.empId);
+		it('should return the property value even when the defaultReturn is passed', function() {
+			assert.equal(getValue(emp1, 'name', 'John'), emp1.name);
 		});
 	});
 
@@ -86,7 +86,7 @@ describe('Object-getValue', function() {
 		});
 	});
 
-	describe('Check for property Current OR Prototype Object', function() {
+	describe('Check for property on Current OR Prototype Object', function() {
 		it('should return the age', function() {
 			assert.equal(getValue(emp1, 'age', 'Age not found', false), emp1.age);
 		});
