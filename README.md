@@ -1,4 +1,4 @@
-# [object-getvalue](https://www.npmjs.com/package/object-getvalue)
+# object-getvalue [(npm-link)](https://www.npmjs.com/package/object-getvalue)
 Get the Object's property directly including nested properties.
 It supports the default return value and hasOwnProperty check.
 
