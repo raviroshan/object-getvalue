@@ -1,4 +1,8 @@
 # object-getvalue [(npm-link)](https://www.npmjs.com/package/object-getvalue)
+
+[![Build Status](https://travis-ci.org/raviroshan/object-getvalue.svg?branch=master)](https://travis-ci.org/raviroshan/object-getvalue)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
 Get the Object's property directly including nested properties.
 It supports the default return value and hasOwnProperty check.
 
