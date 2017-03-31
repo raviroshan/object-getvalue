@@ -1,10 +1,10 @@
 # object-getvalue [(npm-link)](https://www.npmjs.com/package/object-getvalue)
 
-[![Build Status](https://travis-ci.org/raviroshan/object-getvalue.svg?branch=master)](https://travis-ci.org/raviroshan/object-getvalue)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-
 Get the Object's property directly including nested properties.
 It supports the default return value and hasOwnProperty check.
+
+[![Build Status](https://travis-ci.org/raviroshan/object-getvalue.svg?branch=master)](https://travis-ci.org/raviroshan/object-getvalue)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](#)
 
 Runtime Error occurs when any key in the sequence is undefined while getting the Object's nested property value.
 > person.address.location.current.city
@@ -23,6 +23,17 @@ if (person.address &&
 
 This package helps you in directly getting the nested property value from the Object
 > getValue(person, 'address.location.current.city')   //=> 'Bangalore'
+
+
+You can use it to avoid ternary operation while fetching the Object value and assigning that to a variable without worrying about any run-time error.
+
+```js
+// Traditional way
+var city = person.address.location.current.city ? person.address.location.current.city : 'Bangalore';
+
+// Cleaner & Safe way - using getValue()
+var city = getValue(person, 'address.location.current.city', 'Bangalore');
+```
 
 ## Installation
 
