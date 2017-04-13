@@ -165,4 +165,52 @@ describe('Object-getValue', function() {
 			assert.equal(getValue(emp1, 'age', 'Age not found', false), emp1.age);
 		});
 	});
+
+	describe('Check for Invalid function call', function() {
+		it('should return Error : Invalid Object [Not Object Type]', function() {
+			assert.throws(
+				() => {
+					getValue('emp1', 'age');
+				},
+				function(err) {
+					if ((err instanceof Error) && (/Please pass a valid object as first parameter/).test(err)) {
+						return true;
+					}
+				},
+				'unexpected error'
+			);
+		});
+
+		it('should return Error : Invalid Property [Not String Type]', function() {
+			assert.throws(
+				() => {
+					getValue(emp1, 1234);
+				},
+				function(err) {
+					if ((err instanceof Error) && (/Please pass a valid string as second parameter/).test(err)) {
+						return true;
+					}
+				},
+				'unexpected error'
+			);
+		});
+
+		it('should return Error : Invalid Property [undefined Type]', function() {
+			assert.throws(
+				() => {
+					getValue(emp1);
+				},
+				function(err) {
+					if ((err instanceof Error) && (/Please pass a valid string as second parameter/).test(err)) {
+						return true;
+					}
+				},
+				'unexpected error'
+			);
+		});
+
+		it('should return the object itself - No property is passed as second parameter', function() {
+			assert.equal(getValue(emp1, '  '), emp1);
+		});
+	});
 });
