@@ -1,5 +1,5 @@
 function getValue(obj, properties, defaultReturn, onlyOwnProperty) {
-	var propertyArray = properties.split('.');
+	var propertyArray;
 	var appendObj = obj;
 	var res = defaultReturn;
 	var key, index;
@@ -13,6 +13,8 @@ function getValue(obj, properties, defaultReturn, onlyOwnProperty) {
 
 	if (typeof properties !== 'string') {
 		throw new Error('Please pass a valid string as second parameter');
+	} else {
+		propertyArray = properties.split('.');
 	}
 
 	if (properties.trim() === '') {
