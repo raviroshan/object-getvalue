@@ -55,6 +55,8 @@ npm install object-getvalue --save
 
 ```js
 var getValue = require('object-getvalue');
+OR
+import getValue from 'object-getvalue';
 
 var Person = function() {
 	this.name = 'No name defined yet';
@@ -77,10 +79,22 @@ var Employee = function() {
 		designation: 'Consultant',
 		domain: 'e-commerce'
 	};
+	this.friends = [{
+		name: 'Siddhant',
+		age: 27
+	}, {
+		name: 'Harsh',
+		age: 26
+	}, {
+		name: 'Argha',
+		age: 28
+	}];
 };
 
+// Inherit the Person Object
 Employee.prototype = new Person();
 
+// Create an instance of Employee
 var emp1 = new Employee();
 
 // Check for property on Current Object
@@ -102,6 +116,10 @@ getValue(emp1, 'age', 'Age not found', true) //=> 'Age not found'
 
 // Check for property on Current OR Prototype Object
 getValue(emp1, 'age', 'Age not found', false) //=> 25
+
+// Check for the name property on Friends [array] on Emp [object]
+getValue(emp1, 'friends[1].name') //=> 'Harsh'
+
 ```
 
 ## License
