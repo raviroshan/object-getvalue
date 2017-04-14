@@ -5,6 +5,7 @@ It supports the default return value and hasOwnProperty check.
 
 [![Build Status](https://travis-ci.org/raviroshan/object-getvalue.svg?branch=master)](https://travis-ci.org/raviroshan/object-getvalue)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)](#)
+[![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](#)
 
 Runtime Error occurs when any key in the sequence is undefined while getting the Object's nested property value.
 > person.address.location.current.city
