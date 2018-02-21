@@ -1,32 +1,32 @@
 {
-	"name": "object-getvalue",
-	"version": "1.0.5",
-	"description": "Get Object's nested value",
-	"main": "src/index.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"test": "mocha test",
-		"test:coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
-	},
-	"keywords": [
-		"Object",
-		"getValues",
-		"getProperty"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/raviroshan/object-getvalue"
-	},
-	"author": {
-		"name": "Ravi Roshan",
-		"email": "raviroshan.talk@gmail.com",
-		"url": "http://www.raviroshan.info/"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"istanbul": "^0.4.5",
-		"mocha": "^3.2.0"
-	}
+  "name": "object-getvalue",
+  "version": "1.1.0",
+  "description": "Get Object's nested value",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test",
+    "test:coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec"
+  },
+  "keywords": [
+    "Object",
+    "getValues",
+    "getProperty"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raviroshan/object-getvalue"
+  },
+  "author": {
+    "name": "Ravi Roshan",
+    "email": "raviroshan.talk@gmail.com",
+    "url": "http://www.raviroshan.info/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
 }
