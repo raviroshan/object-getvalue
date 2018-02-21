@@ -25,7 +25,7 @@ function getValue(obj, properties, defaultReturn, onlyOwnProperty) {
 		key = propertyArray[index];
 
 		// Check for the Property - Array or simple Key
-		if (key.endsWith(']')) {
+		if (key.charAt(key.length - 1) === ']') {
 			lastPosition = key.lastIndexOf('[');
 			arrayIndexPosition = Number(key.substring(lastPosition + 1, key.length - 1));
 			key = key.substring(0, lastPosition);
